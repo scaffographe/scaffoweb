@@ -1,0 +1,378 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700;900&family=Poppins:wght@400;700&family=Bowlby+One&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-dark-gray text-gray-200 font-overpass overflow-x-hidden;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.delay-stagger-1 {
+  animation-delay: 0.2s;
+}
+
+.delay-stagger-2 {
+  animation-delay: 0.4s;
+}
+
+.delay-stagger-3 {
+  animation-delay: 0.6s;
+}
+
+.delay-stagger-4 {
+  animation-delay: 0.8s;
+}
+
+.delay-stagger-5 {
+  animation-delay: 1s;
+}
+
+.glitch {
+  position: relative;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0.8;
+}
+
+.glitch::before {
+  animation: glitch-effect 2s infinite;
+  color: #0ff;
+  clip: rect(44px, 450px, 56px, 0);
+  z-index: -1;
+}
+
+.glitch::after {
+  animation: glitch-effect 3s infinite;
+  color: #f0f;
+  clip: rect(44px, 450px, 56px, 0);
+  z-index: -2;
+}
+
+@keyframes glitch-effect {
+  0% {
+    clip: rect(43px, 9999px, 44px, 0);
+    transform: translate(0px, -2px);
+  }
+  5% {
+    clip: rect(12px, 9999px, 59px, 0);
+    transform: translate(-5px, 4px);
+  }
+  10% {
+    clip: rect(70px, 9999px, 71px, 0);
+    transform: translate(3px, -5px);
+  }
+  15% {
+    clip: rect(14px, 9999px, 100px, 0);
+    transform: translate(-5px, 2px);
+  }
+  20% {
+    clip: rect(54px, 9999px, 93px, 0);
+    transform: translate(0px, -9px);
+  }
+  25% {
+    clip: rect(9px, 9999px, 106px, 0);
+    transform: translate(-9px, 0px);
+  }
+  30% {
+    clip: rect(87px, 9999px, 154px, 0);
+    transform: translate(6px, 5px);
+  }
+  35% {
+    clip: rect(33px, 9999px, 71px, 0);
+    transform: translate(-1px, 3px);
+  }
+  40% {
+    clip: rect(25px, 9999px, 156px, 0);
+    transform: translate(-5px, -2px);
+  }
+  45% {
+    clip: rect(28px, 9999px, 65px, 0);
+    transform: translate(10px, 8px);
+  }
+  50% {
+    clip: rect(48px, 9999px, 21px, 0);
+    transform: translate(-6px, -2px);
+  }
+  55% {
+    clip: rect(20px, 9999px, 96px, 0);
+    transform: translate(-1px, -2px);
+  }
+  60% {
+    clip: rect(22px, 9999px, 46px, 0);
+    transform: translate(0px, -3px);
+  }
+  65% {
+    clip: rect(54px, 9999px, 56px, 0);
+    transform: translate(-4px, -3px);
+  }
+  70% {
+    clip: rect(46px, 9999px, 16px, 0);
+    transform: translate(6px, -1px);
+  }
+  75% {
+    clip: rect(66px, 9999px, 34px, 0);
+    transform: translate(2px, -9px);
+  }
+  80% {
+    clip: rect(32px, 9999px, 15px, 0);
+    transform: translate(-3px, 6px);
+  }
+  85% {
+    clip: rect(55px, 9999px, 9px, 0);
+    transform: translate(3px, 5px);
+  }
+  90% {
+    clip: rect(55px, 9999px, 143px, 0);
+    transform: translate(-3px, 8px);
+  }
+  95% {
+    clip: rect(83px, 9999px, 76px, 0);
+    transform: translate(-5px, 7px);
+  }
+  100% {
+    clip: rect(81px, 9999px, 108px, 0);
+    transform: translate(10px, -1px);
+  }
+}
+
+.parallax-bg {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.scroll-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-reveal-child {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-reveal-child.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.film-card {
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.film-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.vision-card {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out, border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.vision-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Nouvelles animations */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.9s ease-out forwards;
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-scale-in {
+  animation: scale-in 0.6s ease-out forwards;
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(70px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.6s ease-out forwards;
+}
+
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-70px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 0.6s ease-out forwards;
+}
+
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
