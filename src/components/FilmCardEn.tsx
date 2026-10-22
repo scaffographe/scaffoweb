@@ -54,6 +54,12 @@ const FilmCardEn = ({
         return 'French and Mandarin';
       case 'AVEC LE VENT ET LES FEUILLES':
         return 'French';
+      case 'POCKET CALL':
+        return 'Silent';
+      case 'TO LOVE YOU':
+        return 'Russian and English';
+      case 'LE RABOTEUR DE PARQUET':
+        return 'Silent';
       case 'THE CLEARING':
         return 'English';
       case 'ANASTASIA':
@@ -184,6 +190,8 @@ const FilmCardEn = ({
           {tba ? 
             (title === 'YANG YANG' ? 'TBA | Feature film | Documentary' : 
              title === 'WITH THE WIND AND THE LEAVES' ? 'TBA | 24 minutes | Documentary' : 
+             title === 'POCKET CALL' ? 'TBA | 8 minutes | Fiction' : 
+             (title === 'TO LOVE YOU' || title === 'LE RABOTEUR DE PARQUET') ? 'TBA | Short film | Fiction' : 
              'TBA | Short film') : 
             `${year} | ${duration}${getGenreForRibbon()}`}
         </p>

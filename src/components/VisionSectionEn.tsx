@@ -54,7 +54,7 @@ const VisionSectionEn = () => {
     };
   }, []);
 
-  const founders = [
+  const team = [
     {
       name: 'Guillaume Chabot',
       title: 'Producer and director',
@@ -63,35 +63,25 @@ const VisionSectionEn = () => {
       instagram: 'https://www.instagram.com/guillaume.chabot/'
     },
     {
-      name: "Hicham Chérif d'Ouazzane",
-      title: 'Producer and director',
-      vision: "Passionate about surrealism, Hicham is a Moroccan-born filmmaker who draws inspiration from the absurd and the sordid to unearth the extraordinary in the banality of lives lulled by routine. Trained in architecture, he builds his films with a keen eye for the details that shape the unexpected.",
-      image: '/lovable-uploads/4c95448e-f9b6-47b1-bde4-4e133fb0074c.png',
-      instagram: 'https://www.instagram.com/hichamcherifdouazzane/'
-    }
-  ];
-  
-  const collaborators = [
-    {
       name: 'Samuel Ferland',
-      title: 'Director',
+      title: 'Producer and director',
       vision: "Driven by a passion for storytelling through images, Samuel is a Montreal-based director, designer, and editor, working on both creative advertising campaigns and short fiction films. His creative approach and attention to detail turn each project into a unique experience.",
       image: '/lovable-uploads/92f2aafb-4d8e-43b6-9e05-bdd71b4b434b.png',
       instagram: 'https://www.samuelferland.ca'
     },
     {
       name: 'Timur Aslaev',
-      title: 'Director',
+      title: 'Producer and director',
       vision: "After growing up in Western Siberia, Russia, Timur settled in Montreal as a director and screenwriter. Trained in technology, music and film, his work examines the collective mind, the search for hope and death through an empathetic contemplation of the human condition.",
       image: '/lovable-uploads/ebb77330-a52c-46f9-90e7-9858f8abb6d7.png',
       instagram: 'https://www.instagram.com/timour.tchk/'
     },
     {
-      name: 'Bénédicte Laurent',
-      title: 'Graphic designer',
-      vision: "A trained graphic designer, Bénédicte explores the dialogue between aesthetics and meaning. She is passionate about the semantics of forms, colors and signs. Born in France, she settled in Montreal in 2019, drawn by visual territories where diversity and innovation meet.",
-      image: '/lovable-uploads/f5a820f9-f819-4ba0-857e-53d6bfea11df.png',
-      instagram: 'https://www.instagram.com/benedictatrice/'
+      name: 'Philip Tomlinson',
+      title: 'Producer',
+      vision: 'With a background in digital marketing and product management, Philip is a Montreal-based producer who handles the business side of the company. Drawn to the meeting point of digital media and creative production, he builds the structure that lets each project take shape.',
+      image: '',
+      instagram: 'https://www.facebook.com/amodeotomlinson'
     }
   ];
 
@@ -108,8 +98,8 @@ const VisionSectionEn = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12 max-w-4xl mx-auto">
-          {founders.map((person, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
+          {team.map((person, index) => (
             <a
               key={index}
               href={person.instagram}
@@ -123,56 +113,26 @@ const VisionSectionEn = () => {
               }}
             >
               <div className="flex flex-col items-center" style={{ transform: 'skew(5deg)' }}>
-                <div className="w-full max-w-[200px] mb-4">
-                  <img 
-                    src={person.image} 
-                    alt={person.name} 
-                    className="w-full h-auto"
-                  />
-                </div>
+                {person.image ? (
+                  <div className="w-full max-w-[200px] mb-4">
+                    <img src={person.image} alt={person.name} className="w-full h-auto" />
+                  </div>
+                ) : (
+                  <div className="w-full max-w-[200px] aspect-square mb-4 bg-white/10 flex items-center justify-center" aria-hidden="true">
+                    <span className="font-overpass font-bold text-5xl text-white">PT</span>
+                  </div>
+                )}
                 
                 <h3 className="font-overpass font-bold text-2xl text-white mb-1">{person.name}</h3>
                 <p className="font-poppins text-sm text-white/70 mb-4 whitespace-pre-line text-center">
                   {person.title}
                 </p>
                 
-                <blockquote className="italic text-white/70 text-sm text-center">
-                  {person.vision}
-                </blockquote>
-              </div>
-            </a>
-          ))}
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {collaborators.map((person, index) => (
-            <a
-              key={index}
-              href={person.instagram}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="vision-card opacity-0 translate-y-10 bg-white/10 backdrop-blur-sm rounded-sm p-6 transform transition-all duration-300 hover:bg-white/20 hover:-translate-y-2 cursor-pointer block"
-              style={{ 
-                transform: 'skew(-5deg)',
-                border: '1px solid rgba(255, 255, 255, 0.3)',
-                boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
-              }}
-            >
-              <div className="flex flex-col items-center" style={{ transform: 'skew(5deg)' }}>
-                <div className="w-full max-w-[200px] mb-4">
-                  <img 
-                    src={person.image} 
-                    alt={person.name} 
-                    className="w-full h-auto"
-                  />
-                </div>
-                
-                <h3 className="font-overpass font-bold text-2xl text-white mb-1">{person.name}</h3>
-                <p className="font-poppins text-sm text-white/70 mb-4">{person.title}</p>
-                
-                <blockquote className="italic text-white/70 text-sm text-center">
-                  {person.vision}
-                </blockquote>
+                {person.vision && (
+                  <blockquote className="italic text-white/70 text-sm text-center">
+                    {person.vision}
+                  </blockquote>
+                )}
               </div>
             </a>
           ))}

@@ -3,13 +3,26 @@ import FilmCard from './FilmCard';
 const FilmSection = () => {
   const films = [
     {
+      title: 'TO LOVE YOU',
+      director: 'Réalisé et écrit par Timur Aslaev',
+      year: 'TBA',
+      duration: 'Court métrage',
+      language: 'Fiction | Russe et Anglais',
+      location: 'Sorel-Tracy & Montréal',
+      synopsis: 'Dans un village canadien industriel écrasé par l\'hiver, Ariel, une immigrante russe de 15 ans, compose avec son anxiété ainsi que la bipolarité de sa mère. Lorsqu\'elle découvre une vieille dame morte paisiblement, Ariel est fascinée et se met en quête d\'une légèreté qu\'elle ne connaît pas.',
+      poster: '/lovable-uploads/to-love-you-poster.jpg',
+      festivals: [],
+      isPostProduction: true,
+      tba: true
+    },
+    {
       title: 'YANG YANG',
       director: 'Réalisé et écrit par Guillaume Chabot',
       realizedBy: 'Réalisé par Calvin Liu',
       year: 'TBA',
       duration: 'Long métrage',
-      language: 'Documentaire | Français & Mandarin',
-      location: 'Chine et Montréal',
+      language: 'Documentaire | Mandarin',
+      location: 'Chine & Montréal',
       synopsis: 'Une femme en deuil reçoit une série de correspondances provenant de son mari décédé. À mesure que ces messages changent de ton, la femme doit décider si elle veut continuer à communiquer avec un fantôme.',
       poster: '/lovable-uploads/ede7748b-fa53-4f13-8d20-e40a198b1bd6.png',
       festivals: [],
@@ -19,12 +32,25 @@ const FilmSection = () => {
       showCustomInfo: true
     },
     {
+      title: 'POCKET CALL',
+      director: 'Réalisé et écrit par Léandre Lambert Lefebvre',
+      year: 'TBA',
+      duration: '8 minutes',
+      language: 'Fiction | Muet',
+      location: 'Wentworth & Montréal',
+      synopsis: 'Isolé dans une vieille maison, un homme voit son quotidien se fondre avec celui d\'une présence féminine qui envahit progressivement son espace. Prisonnier de sa propre demeure, il doit affronter ce fantôme étrangement familier qu\'il a longtemps repoussé.',
+      poster: '/lovable-uploads/pocket-call-poster.png',
+      festivals: [],
+      isDistribution: true,
+      tba: true
+    },
+    {
       title: 'AVEC LE VENT ET LES FEUILLES',
       director: 'Réalisé par Timur Aslaev',
       year: 'TBA',
       duration: '24 minutes',
       language: 'Documentaire | Français',
-      location: 'Beauce et Montréal',
+      location: 'Beauce & Montréal',
       synopsis: 'Une force mystérieuse nous attire vers le sommet d\'une colline où une vieille dame demeure, entourée de ses passions, de ses souvenirs et de sa solitude.',
       poster: '/lovable-uploads/avf-poster-new.png',
       isDistribution: true,
@@ -53,7 +79,7 @@ const FilmSection = () => {
       director: 'Réalisé et écrit par Timur Aslaev',
       year: '2024',
       duration: '29 minutes',
-      language: 'Fiction | Français & Anglais',
+      language: 'Fiction | Français et Anglais',
       location: 'Beauce & Montréal',
       synopsis: 'Après la mort tragique de sa mère, le jeune Antoine tente de comprendre le sens de son deuil au sein de celui de sa famille. Par l\'intermédiaire d\'un vase qui lui était particulièrement cher, Antoine retrouve des vestiges de sa mère.',
       poster: '/lovable-uploads/anastasia-poster-new.png',
@@ -103,6 +129,23 @@ const FilmSection = () => {
         'SSFF 2026 - Shawna Shea Film Festival'
       ],
       link: 'https://filmshortage.com/dailyshortpicks/somnus/'
+    },
+    {
+      title: 'LE RABOTEUR DE PARQUET',
+      director: 'Réalisé par Samuel Ferland, écrit par Pascal Pelletier',
+      year: '2020',
+      duration: '4 minutes',
+      language: 'muet',
+      location: 'Montréal',
+      synopsis: 'Une relation se développe entre un travailleur et son employeur.',
+      poster: '/lovable-uploads/9f651040-938e-4ff2-8898-a0eb28f0147a.png',
+      festivals: [
+        'Action/Cut Short Film Competition 2023 - Meilleur film étranger',
+        'Festival Fantazia 2023',
+        'Gold Movie Awards Goddess NIKE 2023',
+        'The Monkey Bread Tree Film Awards 2023'
+      ],
+      link: 'https://www.youtube.com/watch?v=Ny9l76dcBiA'
     }
   ];
 

@@ -55,6 +55,12 @@ const FilmCard = ({
         return 'Français et Mandarin';
       case 'AVEC LE VENT ET LES FEUILLES':
         return 'Français';
+      case 'POCKET CALL':
+        return 'Muet';
+      case 'TO LOVE YOU':
+        return 'Russe et Anglais';
+      case 'LE RABOTEUR DE PARQUET':
+        return 'Muet';
       case 'THE CLEARING':
         return 'Anglais';
       case 'ANASTASIA':
@@ -188,6 +194,8 @@ const FilmCard = ({
           {tba ? 
             (title === "YANG YANG" ? "TBA | Long métrage | Documentaire" : 
              title === "AVEC LE VENT ET LES FEUILLES" ? "TBA | 24 minutes | Documentaire" : 
+             title === "POCKET CALL" ? "TBA | 8 minutes | Fiction" : 
+             (title === "TO LOVE YOU" || title === "LE RABOTEUR DE PARQUET") ? "TBA | Court métrage | Fiction" : 
              "TBA | Court métrage") : 
             `${year} | ${duration}${getGenreForRibbon()}`}
         </p>

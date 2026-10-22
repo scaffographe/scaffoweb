@@ -3,13 +3,26 @@ import FilmCardEn from './FilmCardEn';
 const FilmSectionEn = () => {
   const films = [
     {
+      title: 'TO LOVE YOU',
+      director: 'Written and directed by Timur Aslaev',
+      year: 'TBA',
+      duration: 'Short film',
+      language: 'Fiction | Russian and English',
+      location: 'Sorel-Tracy & Montreal',
+      synopsis: 'In a Canadian industrial town enveloped by winter, Ariel, a 15-year-old Russian immigrant, copes with her anxiety as well as her mother\'s bipolar disorder. When she discovers an old woman who has died peacefully, Ariel is fascinated and sets out in search of a lightness she has never known.',
+      poster: '/lovable-uploads/to-love-you-poster.jpg',
+      festivals: [],
+      isPostProduction: true,
+      tba: true
+    },
+    {
       title: 'YANG YANG',
       director: 'Written and directed by Guillaume Chabot',
       realizedBy: 'Directed by Calvin Liu',
       year: 'TBA',
       duration: 'Feature film',
-      language: 'Documentary | French & Mandarin',
-      location: 'China and Montreal',
+      language: 'Documentary | Mandarin',
+      location: 'China & Montreal',
       synopsis: 'A grieving woman receives a series of correspondences from her deceased husband. As the tone of those messages shifts, she must decide whether to keep communicating with a ghost.',
       poster: '/lovable-uploads/ede7748b-fa53-4f13-8d20-e40a198b1bd6.png',
       festivals: [],
@@ -19,12 +32,25 @@ const FilmSectionEn = () => {
       showCustomInfo: true
     },
     {
+      title: 'POCKET CALL',
+      director: 'Written and directed by Léandre Lambert Lefebvre',
+      year: 'TBA',
+      duration: '8 minutes',
+      language: 'Fiction | Silent',
+      location: 'Wentworth & Montreal',
+      synopsis: 'Isolated in an old house, a man watches his daily life dissolve into that of a female presence slowly taking over his space. A prisoner in his own home, he must confront this strangely familiar ghost he has long kept at bay.',
+      poster: '/lovable-uploads/pocket-call-poster.png',
+      festivals: [],
+      isDistribution: true,
+      tba: true
+    },
+    {
       title: 'WITH THE WIND AND THE LEAVES',
       director: 'Directed by Timur Aslaev',
       year: 'TBA',
       duration: '24 minutes',
       language: 'Documentary | French',
-      location: 'Beauce and Montreal',
+      location: 'Beauce & Montreal',
       synopsis: "A mysterious force draws us to the top of a hill where an elderly woman lives, surrounded by her passions, her memories, and her solitude.",
       poster: '/lovable-uploads/avf-poster-new.png',
       isDistribution: true,
@@ -53,7 +79,7 @@ const FilmSectionEn = () => {
       director: 'Written and directed by Timur Aslaev',
       year: '2024',
       duration: '29 minutes',
-      language: 'Fiction | French & English',
+      language: 'Fiction | French and English',
       location: 'Beauce & Montreal',
       synopsis: 'After the tragic death of his mother, young Antoine tries to make sense of his grief within that of his family. Through a vase that was particularly dear to her, he finds traces of his mother.',
       poster: '/lovable-uploads/anastasia-poster-new.png',
@@ -103,6 +129,23 @@ const FilmSectionEn = () => {
         'SSFF 2026 - Shawna Shea Film Festival'
       ],
       link: 'https://filmshortage.com/dailyshortpicks/somnus/'
+    },
+    {
+      title: 'LE RABOTEUR DE PARQUET',
+      director: 'Directed by Samuel Ferland, written by Pascal Pelletier',
+      year: '2020',
+      duration: '4 minutes',
+      language: 'Silent',
+      location: 'Montreal',
+      synopsis: 'A relationship develops between a worker and his employer.',
+      poster: '/lovable-uploads/9f651040-938e-4ff2-8898-a0eb28f0147a.png',
+      festivals: [
+        'Action/Cut Short Film Competition 2023 - Meilleur film étranger',
+        'Festival Fantazia 2023',
+        'Gold Movie Awards Goddess NIKE 2023',
+        'The Monkey Bread Tree Film Awards 2023'
+      ],
+      link: 'https://www.youtube.com/watch?v=Ny9l76dcBiA'
     }
   ];
 
